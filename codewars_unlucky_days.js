@@ -14,6 +14,18 @@ unluckyDays(1986) == 1
 Note: In Ruby years will start from 1593.
 */
 
-function unluckyDays(year){
-  //your code here
+const unluckyDays = (year) => {
+  let fridays = 0;
+  let month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'Septemeber', 'October', 'November', 'December']
+  let date;
+  let day;
+  for(let i = 0; i < 12; i++) {
+    date = new Date(month[i] + ' 13, ' + year);
+    day = date.getDay();
+    if(day === 4) {
+      fridays++;
+    }
+  }
+
+  return fridays;
 } 
