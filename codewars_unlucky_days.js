@@ -22,7 +22,7 @@ const unluckyDays = (year) => {
   for(let i = 0; i < 12; i++) {
     date = new Date(month[i] + ' 13, ' + year);
     day = date.getDay();
-    if(day === 4) {
+    if(day === 5) {
       fridays++;
     }
   }
